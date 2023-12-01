@@ -1,4 +1,5 @@
 from algs import bubbleSort
+from algs import mergeSort
 import random
 import time
 
@@ -25,7 +26,23 @@ def main():
     LongListToSort = createRandomList(1000)
     print(LongListToSort)
     start_time = time.time()
-    sortedList = bubbleSort.bubbleSort(listToSort)
+    sortedList = bubbleSort.bubbleSort(LongListToSort)
+    print("--- %s seconds ---" % (time.time() - start_time))  
+    print(sortedList)
+    
+    #Test merge sort with random list of 10 numbers
+    listToSort = createRandomList(10)
+    print(listToSort)
+    start_time = time.time()
+    sortedList = mergeSort.Sort(listToSort)
+    print("--- %s seconds ---" % (time.time() - start_time))  
+    print(sortedList)
+    
+    #Test merge sort with random list of 1000 numbers
+    LongListToSort = createRandomList(1000)
+    print(LongListToSort)
+    start_time = time.time()
+    sortedList = mergeSort.Sort(LongListToSort)
     print("--- %s seconds ---" % (time.time() - start_time))  
     print(sortedList)
 
