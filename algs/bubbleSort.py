@@ -13,3 +13,4 @@ def bubbleSort(list):
                 list[i] = list[i+1]          
                 list[i+1] = temp      
         p = p-1
+    return list
